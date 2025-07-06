@@ -1,2 +1,0 @@
-# sanyamshilpakar
-personal website
