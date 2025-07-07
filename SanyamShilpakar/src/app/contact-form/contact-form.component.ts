@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-contact-form',
   standalone: false,
-  templateUrl: './contact-form.component.html'
+  templateUrl: './contact-form.component.html',
+  styleUrl: './contact-form.component.css'
 })
 export class ContactFormComponent {
   form = {
@@ -26,4 +27,6 @@ Message: ${this.form.message}
     const mailtoLink = `mailto:shilpakar.tsanyam@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   }
+
+  
 }
