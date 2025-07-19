@@ -123,6 +123,7 @@
   <section id='projects' class="light-theme">
 
     <div class="work-grid">
+      <img src="images/Tickle-list.png" alt="Work 8" (click)="openModal(8)" class="work-img">
       <img src="images/Weatherly.png" alt="Work 4" (click)="openModal(4)" class="work-img">
       <img src="images/FlockWalk.png" alt="Work 5" (click)="openModal(5)" class="work-img">
       <img src="images/Cervicalytics.png" alt="Work 6" (click)="openModal(6)" class="work-img wide-img-2">
@@ -135,7 +136,7 @@
     </h4>
 
     <!-- projects page detail -->
-    <div class="modal-backdrop" *ngIf="activeModal !== null && activeModal >= 4 && activeModal <= 7"
+    <div class="modal-backdrop" *ngIf="activeModal !== null && activeModal >= 4 && activeModal <= 8"
       (click)="closeModal()">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <div *ngIf="activeModal === 7" class="work-detail">
@@ -195,6 +196,21 @@
               and dynamically updates top 100 songs from Spotify based on the weather </li>
           </ul>
         </div>
+        <div *ngIf="activeModal === 8" class="work-detail">
+          <button class="close-btn" (click)="closeModal()">✕</button>
+          <h1 style="color: #486834;">Tickle List</h1>
+          <h4 style="color: #80b85d;">Tasks that tickle your productivity bone <a href="http://tickle-list.s3-website-us-east-1.amazonaws.com/" style="color: #486834;">Live demo</a> </h4>
+          <hr class="modal-comtent-divider">
+          <ul>
+            <li>Developed a full-stack, serverless app with a React frontend and AWS backend, enabling users to add, update, and delete tasks in real-time.</li>
+            <li>Engineered RESTful APIs using Python-based AWS Lambda functions, with API Gateway providing secure HTTPS endpoints.</li>
+            <li> Designed and implemented role-based access to DynamoDB via IAM policies tailored to HTTP request methods.</li>
+            <li>Integrated CloudWatch for real-time logging and performance monitoring, improving observability and debugging efficiency.</li>
+            <li>Built a responsive, state-driven UI in React for seamless API interaction and live task list updates.</li>
+            <li>Deployed frontend to AWS S3 & connected it with backend APIs to deliver a cloud-native, scalable task management solution.</li>
+            <li>Validated API functionality and error handling using Postman to ensure robust and secure endpoints.</li>
+          </ul>
+        </div>
 
       </div>
     </div>
@@ -225,9 +241,23 @@
 
       <div class="skill-item">
         <div class="icon-circle">
+          <i class="fa-solid fa-code skill-icon"></i>
+        </div>
+        <h1>TypeScript</h1>
+      </div>
+
+      <div class="skill-item">
+        <div class="icon-circle">
           <i class="fa-brands fa-angular skill-icon"></i>
         </div>
         <h1>Angular</h1>
+      </div>
+
+      <div class="skill-item">
+        <div class="icon-circle">
+          <i class="fa-brands fa-react skill-icon"></i>
+        </div>
+        <h1>React</h1>
       </div>
 
       <div class="skill-item">
@@ -277,6 +307,13 @@
           <i class="fa-solid fa-dog skill-icon"></i>
         </div>
         <h1>Datadog</h1>
+      </div>
+
+      <div class="skill-item">
+        <div class="icon-circle">
+          <i class="fa fa-paper-plane skill-icon"></i>
+        </div>
+        <h1>Postman</h1>
       </div>
 
       <div class="skill-item">
